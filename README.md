@@ -1,12 +1,12 @@
-# openzipline-mcp
+# openzippelin-mcp
 
-openzipline-mcp is a Model Context Protocol (MCP) server that provides easy access to secure, standards-compliant smart contract templates. It is designed for use with Claude for Desktop and other MCP-compatible clients, enabling users to generate and retrieve token and governance contracts on demand.
+openzippelin-mcp is a Model Context Protocol (MCP) server that provides easy access to secure, standards-compliant smart contract templates. It is designed for use with Claude for Desktop and other MCP-compatible clients, enabling users to generate and retrieve token and governance contracts on demand.
 
 ---
 
-## What is openzipline-mcp?
+## What is openzippelin-mcp?
 
-openzipline-mcp exposes tools for generating and retrieving smart contract templates, including:
+openzippelin-mcp exposes tools for generating and retrieving smart contract templates, including:
 - ERC20, ERC721, and ERC1155 token contracts
 - Access control, account management, finance, and governance contracts
 
@@ -92,7 +92,7 @@ When you ask a question like "Give me an ERC20 contract" in your MCP-enabled cli
 
 ## Integration Example: MCP Client Configuration
 
-To use openzipline-mcp with Claude for Desktop, Cursor, or any other MCP-compatible client, add the server to your MCP client configuration file. Below are example configurations:
+To use openzippelin-mcp with Claude for Desktop, Cursor, or any other MCP-compatible client, add the server to your MCP client configuration file. Below are example configurations:
 
 ### Claude for Desktop
 
@@ -101,9 +101,9 @@ Edit `~/Library/Application Support/Claude/claude_desktop_config.json` and add:
 ```json
 {
   "mcpServers": {
-    "openzipline-mcp": {
+    "openzippelin-mcp": {
       "command": "node",
-      "args": ["/ABSOLUTE/PATH/TO/PARENT/FOLDER/openzipline-mcp/build/index.js"]
+      "args": ["/ABSOLUTE/PATH/TO/PARENT/FOLDER/openzippelin-mcp/build/index.js"]
     }
   }
 }
@@ -115,17 +115,17 @@ Edit your Cursor MCP configuration (e.g., `~/.cursor/mcp_servers.json`) and add:
 
 ```json
 {
-  "openzipline-mcp": {
+  "openzippelin-mcp": {
     "command": "node",
-    "args": ["/ABSOLUTE/PATH/TO/PARENT/FOLDER/openzipline-mcp/build/index.js"]
+    "args": ["/ABSOLUTE/PATH/TO/PARENT/FOLDER/openzippelin-mcp/build/index.js"]
   }
 }
 ```
 
-> **Note:** Replace `/ABSOLUTE/PATH/TO/PARENT/FOLDER/openzipline-mcp/build/index.js` with the actual absolute path to your built server file.
+> **Note:** Replace `/ABSOLUTE/PATH/TO/PARENT/FOLDER/openzippelin-mcp/build/index.js` with the actual absolute path to your built server file.
 
 After saving the configuration, restart your client. The "get-token-contract" tool and other capabilities will be available for use via natural language prompts.
 
 ---
 
-## openzipline-mcp is designed to work out-of-the-box with Claude for Desktop, Cursor, and any other MCP-compatible client. Simply add the server to your MCP client configuration and start using natural language to generate smart contracts for your blockchain projects.
+## openzippelin-mcp is designed to work out-of-the-box with Claude for Desktop, Cursor, and any other MCP-compatible client. Simply add the server to your MCP client configuration and start using natural language to generate smart contracts for your blockchain projects.
