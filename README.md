@@ -90,6 +90,42 @@ When you ask a question like "Give me an ERC20 contract" in your MCP-enabled cli
 
 ---
 
-## Integration
+## Integration Example: MCP Client Configuration
 
-openzipline-mcp is designed to work out-of-the-box with Claude for Desktop and any other MCP-compatible client. Simply add the server to your MCP client configuration and start using natural language to generate smart contracts for your blockchain projects.
+To use openzipline-mcp with Claude for Desktop, Cursor, or any other MCP-compatible client, add the server to your MCP client configuration file. Below are example configurations:
+
+### Claude for Desktop
+
+Edit `~/Library/Application Support/Claude/claude_desktop_config.json` and add:
+
+```json
+{
+  "mcpServers": {
+    "openzipline-mcp": {
+      "command": "node",
+      "args": ["/ABSOLUTE/PATH/TO/PARENT/FOLDER/openzipline-mcp/build/index.js"]
+    }
+  }
+}
+```
+
+### Cursor
+
+Edit your Cursor MCP configuration (e.g., `~/.cursor/mcp_servers.json`) and add:
+
+```json
+{
+  "openzipline-mcp": {
+    "command": "node",
+    "args": ["/ABSOLUTE/PATH/TO/PARENT/FOLDER/openzipline-mcp/build/index.js"]
+  }
+}
+```
+
+> **Note:** Replace `/ABSOLUTE/PATH/TO/PARENT/FOLDER/openzipline-mcp/build/index.js` with the actual absolute path to your built server file.
+
+After saving the configuration, restart your client. The "get-token-contract" tool and other capabilities will be available for use via natural language prompts.
+
+---
+
+## openzipline-mcp is designed to work out-of-the-box with Claude for Desktop, Cursor, and any other MCP-compatible client. Simply add the server to your MCP client configuration and start using natural language to generate smart contracts for your blockchain projects.
